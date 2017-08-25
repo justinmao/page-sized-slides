@@ -106,3 +106,7 @@ slides.setPageInit = function(pageName, func) {
 slides.setPageDeinit = function(pageName, func) {
   this.pages[pageName].deinit = func;
 }
+
+slides.getCurrentPageNumber = function() {
+  return this.currentPageNumber;
+}
