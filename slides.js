@@ -12,9 +12,7 @@
 
 var slides = {};
 slides.pages = {};
-slides.pageCount = 1;
 slides.currentPageNumber = 0;
-slides.appendix = [];
 
 // Input listeners
 
@@ -52,14 +50,11 @@ document.onkeydown = function(event) {
 
 window.onload = function() {
   var elements = document.getElementsByClassName('slide');
-  slides.pageCount = elements.length;
-  for (var i = 0; i < slides.pageCount; ++i) {
-    slides.pages[i.toString()] = {
-      id: elements[i].id
+  for (var i = 0; i < elements.length; ++i) {
+    slides.pages[elements[i].id] = {
+      pageNumber: i
     };
-    slides.appendix.push(elements[i].id);
   }
-  console.log(slides);
 }
 
 window.onbeforeunload = function() {
@@ -69,20 +64,19 @@ window.onbeforeunload = function() {
 // Scroll event handlers
 
 slides.scrollToPage = function(pageName) {
-  var pageNumber = this.appendix.indexOf(pageName);
-  scrollToPageNumber(pageNumber);
+  scrollToPageNumber(this.pages[pageName].pageNumber);
 }
 
 slides.scrollToPageNumber = function(pageNumber) {
-  if (pageNumber >= 0 && pageNumber < this.pageCount) {
+  if (pageNumber >= 0 && pageNumber < Object.keys(this.pages).length) {
     // Call current page deinitiation handler
-    const currentPage = this.pages[this.currentPageNumber.toString()];
+    const currentPage = this.pages[Object.keys(this.pages)[pageNumber]];
     if (currentPage.deinit) currentPage.deinit();
     // Scroll to new page
     smoothScroll.animateScroll(window.innerHeight * pageNumber);
     this.currentPageNumber = pageNumber;
     // Call new page initiation handler
-    const newPage = this.pages[pageNumber.toString()];
+    const newPage = this.pages[Object.keys(this.pages)[pageNumber]];
     if (newPage.init) newPage.init();
     // Call universal scroll handler
     if (this.onScroll) {
@@ -105,10 +99,10 @@ slides.setOnScroll = function(func) {
   this.onScroll = func;
 }
 
-slides.setPageInit = function(pageNumber, func) {
-  this.pages[pageNumber.toString()].init = func;
+slides.setPageInit = function(pageName, func) {
+  this.pages[pageName].init = func;
 }
 
-slides.setPageDeinit = function(pageNumber, func) {
-  this.pages[pageNumber.toString()].deinit = func;
+slides.setPageDeinit = function(pageName, func) {
+  this.pages[pageName].deinit = func;
 }
