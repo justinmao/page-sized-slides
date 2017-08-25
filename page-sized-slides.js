@@ -1,5 +1,5 @@
 /*
- * page-sized-slides 1.0.1
+ * page-sized-slides 1.0.2
  * Copyright (c) 2017 Justin Mao
  *
  * This project is licensed under the MIT License - please see
@@ -717,6 +717,14 @@
  });
 
 // SOURCE
+
+// Style definition
+var style = document.createElement('style');
+style.type = 'text/css';
+style.innerHTML = 'html {height: 100%; width: 100%; margin: 0;}'
+  + 'body {height: 100%; width: 100%; margin: 0; overflow: hidden;}'
+  + '.slide {height: 100%; width: 100%; display: flex;}';
+document.getElementsByTagName('head')[0].appendChild(style);
 
 // Object initialization
 
