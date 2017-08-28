@@ -53,12 +53,4 @@ body {
 
 * Suggestion: Add `overflow: hidden` or `overflow: scroll` to `.slide` to prevent elements from spilling into other pages.
 
-* page-sized-slides.js makes use of `window.onload`, `window.onbeforeload`, and `document.onkeydown` properties. *Overwriting these methods may (probably will) cause issues.*
-
-* Due to the above, initalize onScroll functions within a `load` event listener as such:
-```javascript
-window.addEventListener('load', function() {
-  pss.setOnScroll( ... );
-  pss.setPageInit( ... );
-  ...
-}, false);
+* page-sized-slides.js makes use of `window.onbeforeload`, and `document.onkeydown` properties. *Overwriting these methods may (probably will) cause issues.*
