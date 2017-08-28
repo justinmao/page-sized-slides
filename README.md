@@ -6,7 +6,9 @@ This project is licensed under the MIT License. See details [here](https://githu
 
 ## Installation/Usage
 
-Include `<script src="page-sized-slides.js"></script>` in your document header.
+Download the [`.js`](https://github.com/justinmao/page-sized-slides/blob/master/dist/page-sized-slides.js) or [`.min.js`](https://github.com/justinmao/page-sized-slides/blob/master/dist/page-sized-slides.min.js).
+
+Include a link to the `.js` file (e.g. `<script src="dist/page-sized-slides.js"></script>`) in your document header.
 
 Page elements should have the `class="slide"` attribute. *Please note each page element must also have an `id` attribute so navigation may work properly.*
 
