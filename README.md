@@ -16,12 +16,12 @@ See the [notes section](#notes) for more information.
 
 ## Built-in Functions
 
-Including `page-sized-slides.js` gives you your very own `pss` object that manages your pages for you. The following functions belong to your `pss` object (i.e. `pss.getCurrentPageNumber()`).
+Including `page-sized-slides.js` gives you your very own `pss` object that manages your pages for you. The following functions belong to your `pss` object (e.g. `pss.getCurrentPageNumber()`).
 
 | Function                         | Arguments                                | Usage |
 | -------------------------------- | ---------------------------------------- | --- |
 | `scrollToPage(pageName)`         | `pageName`: string                       | Scroll to `pageName` (html `id` attribute). |
-| `scrollToPageNumber(pageNumber)` | `pageNumber`: number                     | Scroll to `pageNumber` (in order of appearance, starting at 0) |
+| `scrollToPageNumber(pageNumber)` | `pageNumber`: number                     | Scroll to `pageNumber` (in order of appearance, starting at 0). |
 | `scrollUp()`                     |                                          | Scroll up by one page.
 | `scrollDown()`                   |                                          | Scroll down by one page.
 | `setOnScroll(func)`              | `func`: function                         | Set `func` to fire every time a scroll event triggers. |
