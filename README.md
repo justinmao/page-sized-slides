@@ -12,7 +12,7 @@ Include a link to the `.js` file (e.g. `<script src="dist/page-sized-slides.js">
 
 Page elements should have the `class="slide"` attribute. *Please note each page element must also have an `id` attribute so navigation may work properly.*
 
-See the [notes section](##notes) for more information.
+See the [notes section](#notes) for more information.
 
 ## Built-in Functions
 
