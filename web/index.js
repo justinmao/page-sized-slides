@@ -1,4 +1,4 @@
-window.addEventListener('load',function(){
+window.addEventListener('load', function() {
   pss.setPageInit('p1', function() {
     document.getElementById('bg').style.backgroundColor = '#AB82FF';
   });
