@@ -54,3 +54,6 @@ body {
 * Suggestion: Add `overflow: hidden` or `overflow: scroll` to `.slide` to prevent elements from spilling into other pages.
 
 * page-sized-slides.js makes use of `window.onbeforeload`, and `document.onkeydown` properties. *Overwriting these methods may (probably will) cause issues.*
+
+## Current Issues
+* Large filesize due to hammer.js dependency. Should replace with a vanilla js implementation.
