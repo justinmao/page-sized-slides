@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Lato|Open+Sans:300|Source+Code+Pro');
+
+#bg {
+  z-index: -1;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-image: url('grad.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #AB82FF;
+  transition: 0.8s;
+}
+
+.slide {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: 'Lora', serif;
+  font-size: 2.5em;
+  font-weight: normal;
+  color: white;
+  border: 1px solid white;
+  border-radius: 16px;
+  padding: 8px;
+}
+
+h2 {
+  font-family: 'Open Sans', serif;
+  font-size: 2.5em;
+  color: white;
+  font-weight: normal;
+  margin: 16px 16px 0 16px;
+}
+
+.content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 16px;
+  overflow: scroll;
+}
+
+p {
+  font-family: 'Lato', serif;
+  font-size: 1em;
+  color: white;
+  margin: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+}
+
+p:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.note {
+  margin-top: 12px;
+  font-size: 0.75em;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+span {
+  font-family: 'Source Code Pro', monospace;
+  border-radius: 4px;
+  padding: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 0.8em;
+}
+
+a {
+  font-family: 'Lato', serif;
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: underline;
+}
+
+span a {
+  font-family: 'Source Code Pro', monospace;
+  color: white;
+  text-decoration: none;
+}

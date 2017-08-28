@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="page-sized-slides.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="web/index.css">
+    <script src="dist/page-sized-slides.js"></script>
+    <script src="web/index.js"></script>
   </head>
   <body>
-    <div id="page1" class="slide">
-      <h1>PAGE 1</h1>
-    </div>
-    <div id="page2" class="slide">
-      <h1>PAGE 2</h1>
-    </div>
+    <div id="bg"></div>
+    <section id="p1" class="slide">
+      <h1>page-sized-slides.js</h1>
+    </section>
+    <section id="p2" class="slide">
+      <h2>Elegant &amp; smooth.</h2>
+      <div class="content">
+        <p>Transitions and controls look and feel fluid and natural thanks to <span>lethargy</span> and <span>smooth-scroll</span>.</p>
+        <p class="note">&gt; <a href="https://github.com/d4nyll/lethargy">lethargy</a><br>&gt; <a href="https://github.com/cferdinandi/smooth-scroll">smooth-scroll</a></p>
+      </div>
+    </section>
+    <section id="p3" class="slide">
+      <h2>Simple &amp; easy to use.</h2>
+      <div class="content">
+        <p>Simply include <span>&lt;script src="page-sized-slides.js"&gt;&lt;/script&gt;</span> in your document header and add <span>class="slide"</span> to each page element tag to get started.</p>
+        <p class="note">May I suggest using <span>&lt;section class="slide"&gt;</span> semantic tags?</p>
+      </div>
+    </section>
+    <section id="p4" class="slide">
+      <h2>Powerful &amp; customizable.</h2>
+      <div class="content">
+        <p>Add navigation tools using <span>scrollToPage()</span> or <span>scrollToPageNumber()</span>.
+        <p>Control exactly how page transitions should behave using built-in functions like <span>setPageInit()</span> and <span>setPageDeinit()</span>.</p>
+        <p class="note">&gt; <a href="#">Click here for more details + documentation!</a></p>
+      </div>
+    </section>
+    <section id="p5" class="slide">
+      <h2>Lightweight.</h2>
+      <div class="content">
+         <p>At only <span>8kb</span>, load-time is minimally impacted.</p>
+         <p class="note">&gt; <a href="#">See it on Github.</a></p>
+      </div>
+    </section>
   </body>
 </html>
