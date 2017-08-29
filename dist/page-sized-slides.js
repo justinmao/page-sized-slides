@@ -1,5 +1,5 @@
 /*
- * page-sized-slides 1.0.6
+ * page-sized-slides 1.0.7
  * Copyright (c) 2017 Justin Mao
  *
  * This project is licensed under the MIT License - please see
@@ -10,12 +10,11 @@
  * This project is dependent on the following libraries:
  * lethargy @ https://github.com/d4nyll/lethargy
  * smooth-scroll @ https://github.com/cferdinandi/smooth-scroll
- * hammer.js @ https://github.com/hammerjs/hammer.js
  *
  * The source codes of these libraries have been concatenated to
  * this file for ease of use.
  *
- * Original source code begins at line 35.
+ * Original source code begins at line 30.
  */
 
  // DEPENDENCIES
@@ -41,6 +40,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   }, false);
 
   document.addEventListener('touchmove', function(event) {
+    event.preventDefault();
     if (!y_0) return;
     var y = event.touches[0].clientY;
     var d_y = y_0 - y;
