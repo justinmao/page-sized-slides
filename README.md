@@ -55,5 +55,7 @@ body {
 
 * page-sized-slides.js makes use of `window.onbeforeload`, and `document.onkeydown` properties. *Overwriting these methods may (probably will) cause issues.*
 
+* A mobile-friendly meta tag will make things much easier (e.g. `<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">`).
+
 ## Current Issues
-* Large filesize due to hammer.js dependency. Should replace with a vanilla js implementation.
+* N/A
