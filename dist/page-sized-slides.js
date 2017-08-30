@@ -1,5 +1,5 @@
 /*
- * page-sized-slides 1.0.7
+ * page-sized-slides 1.0.8
  * Copyright (c) 2017 Justin Mao
  *
  * This project is licensed under the MIT License - please see
@@ -104,9 +104,11 @@ pss.currentPageNumber = 0;
 window.addEventListener('load', function() {
   var elements = document.getElementsByClassName('slide');
   for (var i = 0; i < elements.length; ++i) {
-    pss.pages[elements[i].id] = {
-      pageNumber: i
-    };
+    if (!elements[i].id) {
+      pss.pages['_' + i] = { pageNumber: i };
+    } else {
+      pss.pages[elements[i].id] = { pageNumber: i };
+    }
   }
 }, false);
 

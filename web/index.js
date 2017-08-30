@@ -42,5 +42,4 @@ window.addEventListener('load', function() {
     document.getElementById('instructions').style.opacity = 1;
   }, 800);
 
-
 }, false);
